@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <script src="js/nav.js" defer></script>
+ 
+     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+     integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+     crossorigin="anonymous"></script>
+    <title>services</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            background-image: url(background.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: sans-serif;
+        }
+        
+        .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 200px;
+        background: rgb(14, 8, 75);
+        box-shadow: 0 4px 10px rgb(14, 8, 75);
+        }
+        .nav,
+        .nav .nav-links {
+        display: flex;
+        align-items: center;
+        }
+        .nav {
+        justify-content: space-between;
+        }
+        a {
+        color: #fff;
+        text-decoration: none;
+        }
+        .nav .logo {
+        font-size: 22px;
+        font-weight: 500;
+        }
+        .nav .nav-links {
+        column-gap: 20px;
+        list-style: none;
+        }
+        .nav .nav-links a {
+        transition: all 0.2s linear;
+        }
+        .nav.openSearch .nav-links a {
+        opacity: 0;
+        pointer-events: none;
+        }
+        .nav .search-icon {
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        }
+        .nav .search-box {
+        position: absolute;
+        right: 250px;
+        height: 45px;
+        max-width: 555px;
+        width: 100%;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.2s linear;
+        }
+        .nav.openSearch .search-box {
+        opacity: 1;
+        pointer-events: auto;
+        }
+        .search-box .search-icon {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        left: 15px;
+        color: rgb(226, 223, 240);
+        transform: translateY(-50%);
+        }
+        .search-box input {
+        height: 100%;
+        width: 100%;
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        background-color: #fff;
+        padding: 0 15px 0 45px;
+        }
+
+        .nav .navOpenBtn,
+        .nav .navCloseBtn {
+        display: none;
+        }
+
+        /* responsive */
+       
+    .title h1{
+        text-align: center;
+        padding-top: 70px;
+        font-size: 42px;
+    }
+    .title h1::after{
+        content: "";
+        height: 4px;
+        width: 180px;
+        background-color: rgb(226, 223, 240);
+        display: block;
+        margin: auto;
+    }
+    .content{
+        color: #efefef;
+        font-size: 20px;
+        text-align: center;
+        justify-content: space-between;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding-top: 30px;
+    }
+    .Services{
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 75px auto;
+        text-align: center;
+    }
+    .card{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        margin: 0px 20px;
+        padding: 20px 20px;
+        background-color: #efefef;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .card:hover{
+        background-color: #beb8de;
+        transition: 0.4s ease;
+    }
+    .card .icon{
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+    .card h2{
+        font-size: 28px;
+        color: #c94f4f;
+        margin-bottom: 20px;
+    }
+    .card p{
+        font-size: 17px;
+        margin-bottom: 30px;
+        line-height: 1.5;
+        color: #5e5e5e;
+    }
+    .button{
+        font-size: 15px;
+        text-decoration: none;
+        color:#fff;
+        background-color: #2c677c; 
+        padding: 8px 12px;
+        border-radius: 5px;
+        letter-spacing: 1px;
+    }
+    .button:hover{
+        background-color: #c94f4f;
+        transition: 0.4 ease;
+    }
+  
+
+
+     .content1{
+        color: #efefef;
+        font-size: 16px;
+         text-align: center;
+        justify-content: space-between;
+        left: 120px;
+        right: 120px;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding-top: 30px;
+     }
+     .content1 h1{
+        font-size: 36px;
+        left: 60px;
+        justify-content: baseline;
+
+     }
+     .content1 p{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 5px;
+        padding-right: 5px;
+     }
+     .content2{
+        color: #efefef;
+        font-size: 16px;
+         text-align: center;
+        justify-content: space-between;
+        left: 120px;
+        right: 120px;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding-top: 30px;
+     }
+     .content2 p{
+        padding-top: 30px;
+        padding-bottom: 50px;
+        padding-left: 5px;
+        padding-right: 5px;
+     }
+
+     @media screen and (max-width: 1160px) {
+        .nav {
+            padding: 15px 100px;
+        }
+        .nav .search-box {
+            right: 150px;
+        }
+        }
+        @media screen and (max-width: 950px) {
+        .nav {
+            padding: 15px 50px;
+        }
+        .nav .search-box {
+            right: 100px;
+            max-width: 400px;
+        }
+        }
+        @media screen and (max-width: 768px) {
+        .nav .navOpenBtn,
+        .nav .navCloseBtn {
+            display: block;
+        }
+        .nav {
+            padding: 15px 20px;
+        }
+        .nav .nav-links {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            height: 100%;
+            max-width: 280px;
+            width: 100%;
+            padding-top: 100px;
+            row-gap: 30px;
+            flex-direction: column;
+            background-color: rgb(14, 8, 75);
+            box-shadow: 0 2px 10px  rgb(14, 8, 75,0.5);
+            transition: all 0.4s ease;
+            z-index: 100;
+        }
+        .nav.openNav .nav-links {
+            left: 0;
+        }
+        .nav .navOpenBtn {
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .nav .navCloseBtn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .nav .search-box {
+            top: calc(100% + 10px);
+            max-width: calc(100% - 20px);
+            right: 50%;
+            transform: translateX(50%);
+            box-shadow: 0 2px 10px rgb(230, 228, 246);
+        }
+
+         @media screen and (max-width:940px) {
+        .Services{
+            display: flex;
+            flex-direction: column;
+        }
+        .card{
+            width: 85%;
+            display: flex;
+            margin: 20px 0px;
+        }
+
+     } 
+    
+    }
+
+
+     
+    </style>
+
+</head>
+<body>
+    <div class="section">
+
+        <nav class="nav">
+            <i class="uil uil-bars navOpenBtn"></i>
+            <a href="#" class="logo">Code Coin</a>
+      
+            <ul class="nav-links">
+                <i class="uil uil-times navCloseBtn"></i>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="currencycalculaor.html">calculator</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+              </ul>
+      
+            <i class="uil uil-search search-icon" id="searchIcon"></i>
+            <div class="search-box">
+              <i class="uil uil-search search-icon"></i>
+              <input type="text" placeholder="Search here..." />
+            </div>
+          </nav>
+
+
+        <div class="title">
+            <h1 style="color: #efefef; top: 60px;"><b>our services</b></h1>
+        </div>
+
+        <div class="content">
+            <p><b>codecoin</b> provides a fundamental analysis of the crypto market.
+                 In addition to tracking price, volume and market capitalisation, 
+                 codecoin tracks community growth, open-source code development,
+                  major events and on-chain metrics.</p>
+        </div>
+        <div class="Services">
+            <div class="card">
+                <div class="icon">
+                    <!-- <i class="fas fa-coin"></i> -->
+                </div>
+                <h2>Bit Coin</h2>
+                <p>Bitcoin is a form of digital currency that aims to eliminate
+                     the need for central authorities such as banks or governments. 
+                     Instead, Bitcoin uses blockchain technology to support peer-to-peer
+                      transactions between users on a decentralized network.invented in 2008.</p>
+                <a href="" class="button">Read More</a>
+            </div>
+
+            <div class="card">
+            <div class="icon">
+                <!-- <i class="fas fa-wrench"></i> -->
+            </div>
+            <h2>Doge Coin</h2>
+            <p>Dogecoin is a cryptocurrency, like Bitcoin or Ethereum—although it's a very
+                 different animal than either of these popular coins. Dogecoin was originally
+                  created at least in part as a lighthearted joke for crypto enthusiasts,
+                   and took its name from a once-popular meme.</p>
+            <a href="" class="button">Read More</a>
+            </div>
+
+        <div class="card">
+        <div class="icon">
+            <!-- <i class="fas fa-handshake"></i> -->
+        </div>
+        <h2>Ethereum Coin</h2>
+        <p>Ethereum is a decentralized blockchain platform that establishes 
+            a peer-to-peer network that securely executes and verifies application code, 
+            called smart contracts.Smart contracts allow participants to transact with 
+            each other without a trusted central authority.</p>
+        <a href="" class="button">Read More</a>
+        </div>
+
+        </div>
+        <div class="content1">
+            <h1 style="font-size: 36px; margin-left: 50px;">How does <b>code coin</b> Calculate Cryptocurrency Prices?</h1>
+            <p> The price is calculated using a global volume-weighted average price formula which is 
+            based on the pairings available on different exchanges of a particular crypto asset.
+             For examples and more detailed information on how we track cryptocurrency prices and
+            other metrics, see our methodology page here.</p>
+        </div>
+        <div class="content2">
+            <h1 style="font-size: 36px; margin-left: 50px;"><b>What </b> is Crypto Market Cap?</h1>
+            <p>   SCrypto market cap is the total value of all the coins of a particular cryptocurrency
+                 that have been mined or are in circulation. Market capitalization is used to determine 
+                 the ranking of cryptocurrencies. The higher the market cap of a particular crypto coin,
+                  the higher its ranking and share of the market. Crypto market cap is calculated by multiplying
+                   the total number of coins in circulation by its current price. For instance, to calculate the
+                    market cap of Ethereum, all you need to do is multiply the total number of Ethereum in 
+                    circulation by the current price of one Ethereum and you will get its market cap.</p>
+        </div>
+    </div>
+    
+</body>
+</html>
